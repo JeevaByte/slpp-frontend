@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../App.css"
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const Register = () => {
   };
 
   return (
-    <div style={{ margin: '50px auto', width: '300px', textAlign: 'center' }}>
+    <div style={{ margin: '50px auto', width: '500px', textAlign: 'center' ,fontSize: "30px"}}>
       <h2>Register</h2>
       <input
         name="email"
@@ -26,22 +27,22 @@ const Register = () => {
         placeholder="Email"
         value={formData.email}
         onChange={handleChange}
-        style={{ margin: '10px', padding: '10px', width: '90%' }}
-      />
+        className='place_holder'
+     />
       <input
         name="fullName"
         type="text"
         placeholder="Full Name"
         value={formData.fullName}
         onChange={handleChange}
-        style={{ margin: '10px', padding: '10px', width: '90%' }}
+        className='place_holder'
       />
       <input
         name="dateOfBirth"
         type="date"
         value={formData.dateOfBirth}
         onChange={handleChange}
-        style={{ margin: '10px', padding: '10px', width: '90%' }}
+        className='place_holder'
       />
       <input
         name="password"
@@ -49,7 +50,7 @@ const Register = () => {
         placeholder="Password"
         value={formData.password}
         onChange={handleChange}
-        style={{ margin: '10px', padding: '10px', width: '90%' }}
+        className='place_holder'
       />
       <input
         name="bioID"
@@ -57,7 +58,7 @@ const Register = () => {
         placeholder="BioID"
         value={formData.bioID}
         onChange={handleChange}
-        style={{ margin: '10px', padding: '10px', width: '90%' }}
+        className='place_holder'
       />
       <button onClick={handleRegister} style={{ padding: '10px', width: '95%' }}>Register</button>
     </div>
